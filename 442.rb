@@ -1,4 +1,7 @@
-# https://buttondown.com/cassidoo/archive/the-ability-to-observe-without-evaluating-is-the/
+# Other solutions:
+# https://github.com/enderahmetyurt/cassidoo-interviews/blob/main/nearest_perfect_months.rb
+#
+# Instructions:
 #
 # February 2026 is a perfect month! Write a function that returns the closest previous and next perfect month around the given Gregorian year.
 #
@@ -9,6 +12,9 @@
 #
 #     nearestPerfectMonths(2026)
 #     > { prev: "2026-02", next: "2027-02" }
+#
+# Source:
+# https://buttondown.com/cassidoo/archive/the-ability-to-observe-without-evaluating-is-the/
 
 require "date"
 

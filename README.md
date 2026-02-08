@@ -5,3 +5,7 @@ There is a weekly programming interview question in the newsletter [rendezvous w
 This repo contains my solutions in Ruby, originally posted in [the Ruby Users Forum](https://www.rubyforum.org/).
 
 To run a solution with minimal hassle, copy-paste it into the online [Ruby Playground](https://ruby.github.io/play-ruby/).
+
+## Other people's solutions in Ruby
+
+- [enderahmetyurt](https://github.com/enderahmetyurt/cassidoo-interviews)
