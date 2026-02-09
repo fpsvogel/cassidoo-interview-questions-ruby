@@ -4,7 +4,8 @@
 #
 # Instructions:
 #
-# February 2026 is a perfect month! Write a function that returns the closest previous and next perfect month around the given Gregorian year.
+# February 2026 is a perfect month! Write a function that returns the closest
+# previous and next perfect month around the given Gregorian year.
 #
 # Examples:
 #
@@ -36,11 +37,11 @@ end
 # Tests
 
 nearest_perfect_months(2025).then do
-  puts it
+  p it
   raise unless it == {prev: "2021-02", next: "2026-02"}
 end
 
 nearest_perfect_months(2026).then do
-  puts it
+  p it
   raise unless it == {prev: "2026-02", next: "2027-02"}
 end
