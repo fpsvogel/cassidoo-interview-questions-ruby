@@ -8,5 +8,5 @@ To run a solution with minimal hassle, copy-paste it into the online [Ruby Playg
 
 ## Other people's solutions in Ruby
 
-- [enderahmetyurt](https://github.com/enderahmetyurt/cassidoo-interviews)
 - [Ruby Users Forum](https://www.rubyforum.org/search?q=Cassidoo%27s%20interview%20question%20of%20the%20week%20order%3Alatest)
+- [enderahmetyurt](https://github.com/enderahmetyurt/cassidoo-interviews)
