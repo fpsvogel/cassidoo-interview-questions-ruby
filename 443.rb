@@ -15,23 +15,29 @@
 # Source:
 # https://buttondown.com/cassidoo/archive/everyone-deserves-the-space-to-change-and-for/
 
-def flat_reverse_partition(array, el)
-  array.sort_by { (it == el) ? 1 : 0 }
-end
+module FlatReversePartition
+  refine Enumerable do
+    def flat_reverse_partition(el)
+      sort_by { (it == el) ? 1 : 0 }
+    end
 
-def flat_reverse_partition!(array, el)
-  array.sort_by! { (it == el) ? 1 : 0 }
+    def flat_reverse_partition!(el)
+      sort_by! { (it == el) ? 1 : 0 }
+    end
+  end
 end
 
 # Tests
 
-flat_reverse_partition([0, 2, 0, 3, 10], 0).then do
+using FlatReversePartition
+
+[0, 2, 0, 3, 10].flat_reverse_partition(0).then do
   p it
   raise unless it == [2, 3, 10, 0, 0]
 end
 
 [0, 2, 0, 3, 10].then do
-  flat_reverse_partition!(it, 0)
+  it.flat_reverse_partition!(0)
   p it
   raise unless it == [2, 3, 10, 0, 0]
 end
