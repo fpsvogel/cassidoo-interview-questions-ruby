@@ -6,7 +6,4 @@ This repo contains my solutions in Ruby, originally posted in [the Ruby Users Fo
 
 To run a solution with minimal hassle, copy-paste it into the online [Ruby Playground](https://ruby.github.io/play-ruby/).
 
-## Other people's solutions in Ruby
-
-- [Ruby Users Forum](https://www.rubyforum.org/search?q=Cassidoo%27s%20interview%20question%20of%20the%20week%20order%3Alatest)
-- [enderahmetyurt](https://github.com/enderahmetyurt/cassidoo-interviews)
+You can find other people's solutions in the [Ruby Users Forum](https://www.rubyforum.org/search?q=Cassidoo%27s%20interview%20question%20of%20the%20week%20order%3Alatest). Question-specific forum threads are linked in each question in this repo.

@@ -1,6 +1,6 @@
 # Other solutions:
-# https://www.rubyforum.org/t/cassidoos-interview-question-of-the-week-442
-# https://github.com/enderahmetyurt/cassidoo-interviews/blob/main/nearest_perfect_months.rb
+# https://www.rubyforum.org/t/cassidoos-interview-question-of-the-week-442/86
+# https://web.archive.org/web/20260212143856/https://www.rubyforum.org/t/cassidoos-interview-question-of-the-week-442/86
 #
 # Instructions:
 #
