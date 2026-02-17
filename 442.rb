@@ -1,5 +1,5 @@
 # Other solutions:
-# https://www.rubyforum.org/t/cassidoos-interview-question-of-the-week-442/86
+# https://www.rubyforum.org/t/cassidoos-interview-question-of-the-week-442
 # https://web.archive.org/web/20260212143856/https://www.rubyforum.org/t/cassidoos-interview-question-of-the-week-442/86
 #
 # Instructions:
