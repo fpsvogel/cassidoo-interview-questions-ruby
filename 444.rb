@@ -1,10 +1,12 @@
 # Other solutions:
 # https://www.rubyforum.org/t/cassidoo-s-interview-question-of-the-week-444
-# TODO archive.org link
+# https://web.archive.org/web/20260224024309/https://www.rubyforum.org/t/cassidoo-s-interview-question-of-the-week-444/124
 #
 # Instructions:
 #
-# You have a 2D grid of numbers. Write a function that zooms in by an integer factor k >= 2 by turning each cell into a k x k block with the same value, returning the bigger grid.
+# You have a 2D grid of numbers. Write a function that zooms in by an integer
+# factor k >= 2 by turning each cell into a k x k block with the same value,
+# returning the bigger grid.
 #
 # Examples: see tests below.
 #
