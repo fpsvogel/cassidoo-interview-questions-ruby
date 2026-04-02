@@ -6,7 +6,8 @@
 #
 # Find the majority element in an array (one that appears more than n/2 times)
 # in O(n) time and O(1) space without hashmaps. Hint: the Boyer-Moore Voting
-# algorithm might help if you can't figure this one out!
+# algorithm (https://en.wikipedia.org/wiki/Boyer–Moore_majority_vote_algorithm)
+# might help if you can't figure this one out!
 #
 # Examples:
 #
