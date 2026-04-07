@@ -43,17 +43,7 @@ end
 
 # Tests
 
-min_swaps_to_alternate("aabb").then do
-  p it
-  raise unless it == 1
-end
-
-min_swaps_to_alternate("aaab").then do
-  p it
-  raise unless it == -1
-end
-
-min_swaps_to_alternate("aaaabbbb").then do
-  p it
-  raise unless it == 6
-end
+raise unless min_swaps_to_alternate("aabb") == 1
+raise unless min_swaps_to_alternate("aaab") == -1
+raise unless min_swaps_to_alternate("aaaabbbb") == 6
+puts "✓ Tests passed"

@@ -51,17 +51,13 @@ end
 
 # Tests
 
-fuzzy_search("the cat sat on the mat", "cat", 0).then do
-  p it
-  raise unless it == [{position: 4, errors: 0}]
-end
-
-fuzzy_search("cassidoo", "cool", 1).then do
-  p it
-  raise unless it == []
-end
-
-fuzzy_search("cassidoo", "cool", 3).then do
-  p it
-  raise unless it == [{position: 0, errors: 3}, {position: 4, errors: 3}, {position: 5, errors: 2}, {position: 6, errors: 2}, {position: 7, errors: 3}]
-end
+raise unless fuzzy_search("the cat sat on the mat", "cat", 0) == [{position: 4, errors: 0}]
+raise unless fuzzy_search("cassidoo", "cool", 1) == []
+raise unless fuzzy_search("cassidoo", "cool", 3) == [
+  {position: 0, errors: 3},
+  {position: 4, errors: 3},
+  {position: 5, errors: 2},
+  {position: 6, errors: 2},
+  {position: 7, errors: 3}
+]
+puts "✓ Tests passed"

@@ -32,12 +32,6 @@ end
 
 # Tests
 
-majority_element([2, 2, 1, 1, 2, 2, 1, 2, 2]).then do
-  p it
-  raise unless it == 2
-end
-
-majority_element([3, 3, 4, 2, 3, 3, 1]).then do
-  p it
-  raise unless it == 3
-end
+raise unless majority_element([2, 2, 1, 1, 2, 2, 1, 2, 2]) == 2
+raise unless majority_element([3, 3, 4, 2, 3, 3, 1]) == 3
+puts "✓ Tests passed"

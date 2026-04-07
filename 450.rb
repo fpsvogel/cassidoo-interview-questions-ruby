@@ -54,22 +54,8 @@ fs = {
   "/alias" => "/real"
 }
 
-resolve_path(fs, "/a").then do
-  p it
-  raise unless it == "/c"
-end
-
-resolve_path(fs, "/alias").then do
-  p it
-  raise unless it == "/real"
-end
-
-resolve_path(fs, "/loop1").then do
-  p it
-  raise unless it.nil?
-end
-
-resolve_path(fs, "/real").then do
-  p it
-  raise unless it == "/real"
-end
+raise unless resolve_path(fs, "/a") == "/c"
+raise unless resolve_path(fs, "/alias") == "/real"
+raise unless resolve_path(fs, "/loop1").nil?
+raise unless resolve_path(fs, "/real") == "/real"
+puts "✓ Tests passed"

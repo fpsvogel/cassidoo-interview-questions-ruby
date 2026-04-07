@@ -36,12 +36,6 @@ end
 
 # Tests
 
-nearest_perfect_months(2025).then do
-  p it
-  raise unless it == {prev: "2021-02", next: "2026-02"}
-end
-
-nearest_perfect_months(2026).then do
-  p it
-  raise unless it == {prev: "2026-02", next: "2027-02"}
-end
+raise unless nearest_perfect_months(2025) == {prev: "2021-02", next: "2026-02"}
+raise unless nearest_perfect_months(2026) == {prev: "2026-02", next: "2027-02"}
+puts "✓ Tests passed"

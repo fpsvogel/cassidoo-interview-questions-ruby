@@ -32,13 +32,11 @@ end
 
 using FlatReversePartition
 
-[0, 2, 0, 3, 10].flat_reverse_partition(0).then do
-  p it
-  raise unless it == [2, 3, 10, 0, 0]
-end
+raise unless [0, 2, 0, 3, 10].flat_reverse_partition(0) == [2, 3, 10, 0, 0]
 
 [0, 2, 0, 3, 10].then do
   it.flat_reverse_partition!(0)
-  p it
   raise unless it == [2, 3, 10, 0, 0]
 end
+
+puts "✓ Tests passed"

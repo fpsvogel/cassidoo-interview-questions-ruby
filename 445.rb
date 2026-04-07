@@ -44,22 +44,8 @@ end
 
 # Tests
 
-max_subarray_sum([-2, 1, -3, 4, -1, 2, 1, -5, 4]).then do
-  p it
-  raise unless it == 6
-end
-
-max_subarray_sum([5]).then do
-  p it
-  raise unless it == 5
-end
-
-max_subarray_sum([-1, -2, -3, -4]).then do
-  p it
-  raise unless it == -1
-end
-
-max_subarray_sum([5, 4, -1, 7, 8]).then do
-  p it
-  raise unless it == 23
-end
+raise unless max_subarray_sum([-2, 1, -3, 4, -1, 2, 1, -5, 4]) == 6
+raise unless max_subarray_sum([5]) == 5
+raise unless max_subarray_sum([-1, -2, -3, -4]) == -1
+raise unless max_subarray_sum([5, 4, -1, 7, 8]) == 23
+puts "✓ Tests passed"

@@ -53,30 +53,26 @@ end
 
 # Tests
 
-fire_station_coverage([
+raise unless fire_station_coverage([
   [2, 0, 1],
   [0, 2, 0],
   [1, 0, 2]
-]).then do
-  p it
-  raise unless it == [
-    [2, 1, 0],
-    [1, 2, 1],
-    [0, 1, 2]
-  ]
-end
+]) == [
+  [2, 1, 0],
+  [1, 2, 1],
+  [0, 1, 2]
+]
 
-fire_station_coverage([
+raise unless fire_station_coverage([
   [1, 0, 0, 1],
   [0, 0, 0, 0],
   [0, 0, 0, 0],
   [1, 0, 0, 1]
-]).then do
-  p it
-  raise unless it == [
-    [0, 1, 1, 0],
-    [1, 2, 2, 1],
-    [1, 2, 2, 1],
-    [0, 1, 1, 0]
-  ]
-end
+]) == [
+  [0, 1, 1, 0],
+  [1, 2, 2, 1],
+  [1, 2, 2, 1],
+  [0, 1, 1, 0]
+]
+
+puts "✓ Tests passed"
