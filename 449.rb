@@ -24,7 +24,7 @@
 # Based on the solution by lpogic at
 # https://web.archive.org/web/20260402172834/https://www.rubyforum.org/t/cassidoo-s-interview-question-of-the-week-449/213#post_2
 # Difference: memoization is added here, for linear rather than exponential time.
-def min_error(haystack, haystack_left, needle, needle_left, memo)
+def min_error(haystack, haystack_left, needle, needle_left, memo = {})
   return 0 if needle_left <= 0
   return needle_left if haystack_left <= 0
   return memo[[haystack_left, needle_left]] if memo.key?([haystack_left, needle_left])
@@ -44,7 +44,7 @@ end
 
 def fuzzy_search(haystack, needle, max_error)
   (0...haystack.size).filter_map do |i|
-    error = min_error(haystack, haystack.size - i, needle, needle.size, {})
+    error = min_error(haystack, haystack.size - i, needle, needle.size)
     {position: i, errors: error} if error <= max_error
   end
 end

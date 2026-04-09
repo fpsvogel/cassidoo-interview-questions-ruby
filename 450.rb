@@ -30,8 +30,7 @@
 # Source:
 # https://buttondown.com/cassidoo/archive/u1f360-id-rather-regret-the-things-ive-done-than/
 
-def resolve_path(filesystem, path, visited_paths = nil)
-  visited_paths ||= []
+def resolve_path(filesystem, path, visited_paths = [])
   return nil if visited_paths.include?(path)
   visited_paths << path
 
