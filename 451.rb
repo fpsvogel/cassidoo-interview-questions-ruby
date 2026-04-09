@@ -21,21 +21,32 @@
 # https://buttondown.com/cassidoo/archive/9-ufe0f-u20e3-there-are-no-mistakes-only/
 
 def perrin_combinations(n, k)
-  numbers = (0..n).map { perrin_number(it) }
-
-  (1..numbers.count).flat_map { |count|
-    numbers.combination(count).map(&:uniq).map(&:sort).select { |combo| combo.sum == k }
-  }.uniq.sort
+  perrin_numbers(n)
+    .uniq
+    .sort
+    .then { sum_combinations(it, k) }
+    .sort
 end
 
-def perrin_number(n)
-  case n
-  when ...0 then raise("n cannot be negative")
-  when 0 then 3
-  when 1 then 0
-  when 2 then 2
-  else perrin_number(n - 2) + perrin_number(n - 3)
+def perrin_numbers(n)
+  raise("n cannot be negative") if n.negative?
+
+  numbers = [3, 0, 2]
+  (3..n).each do |i|
+    numbers << numbers[i - 2] + numbers[i - 3]
   end
+
+  numbers[0..n]
+end
+
+def sum_combinations(numbers, k_remaining, current = [])
+  return [current] if k_remaining.zero?
+
+  numbers
+    .take_while { it <= k_remaining }
+    .flat_map.with_index { |num, i|
+      sum_combinations(numbers[i + 1..], k_remaining - num, current + [num])
+    }
 end
 
 # Tests
