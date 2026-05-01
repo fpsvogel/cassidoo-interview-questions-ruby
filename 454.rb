@@ -42,12 +42,21 @@ def min_repairs(grid, k)
   loop do
     zeros = find_zeros(grid)
     adjacent_zeros = zeros.map { |(row_i, col_i)|
-      [
-        (grid.dig(row_i - 1, col_i) if row_i > 0),
-        (grid.dig(row_i, col_i - 1) if col_i > 0),
-        (grid.dig(row_i + 1, col_i) if row_i < grid.size - 1),
-        (grid.dig(row_i, col_i + 1) if col_i < grid[0].size - 1)
-      ].count(0)
+      above = grid.dig(row_i - 1, col_i) if row_i > 0
+      left = grid.dig(row_i, col_i - 1) if col_i > 0
+      below = grid.dig(row_i + 1, col_i) if row_i < grid.size - 1
+      right = grid.dig(row_i, col_i + 1) if col_i < grid[0].size - 1
+      above_left = grid.dig(row_i - 1, col_i - 1) if row_i > 0 && col_i > 0
+      below_left = grid.dig(row_i + 1, col_i - 1) if row_i < grid.size - 1 && col_i > 0
+      below_right = grid.dig(row_i + 1, col_i + 1) if row_i < grid.size - 1 && col_i < grid[0].size - 1
+      above_right = grid.dig(row_i - 1, col_i + 1) if row_i > 0 && col_i < grid[0].size - 1
+
+      # if this zero is "blocking" (in the path of two others) then count it as highest priority
+      next 4 if (above == 0 && below == 0 && [left, above_left, below_left].include?(1) && [right, above_right, below_right].include?(1)) ||
+        (left == 0 && right == 0 && [above, above_left, above_right].include?(1) && [below, below_left, below_right].include?(1))
+
+      # otherwise, count priority as the number of adjacent zeros
+      [above, left, below, right].count(0)
     }
     max_adjacent_zeros = adjacent_zeros.max
     max_adjacent_zeros_indices = adjacent_zeros.each_index.select { adjacent_zeros[it] == max_adjacent_zeros }
@@ -123,15 +132,16 @@ grid_3 = [
 k_3 = 6
 
 grid_4 = [
-  [0, 1, 0, 0],
-  [0, 0, 0, 0],
-  [0, 1, 0, 0],
-  [0, 0, 0, 0]
+  [0, 0, 0],
+  [0, 0, 0],
+  [1, 0, 1],
+  [0, 0, 0],
+  [0, 0, 0]
 ]
-k_4 = 3
+k_4 = 6
 
 raise unless min_repairs(grid_1, k_1) == 2
 raise unless min_repairs(grid_2, k_2) == 3
 raise unless min_repairs(grid_3, k_3) == 4
-raise unless min_repairs(grid_4, k_4) == 4
+raise unless min_repairs(grid_4, k_4) == 1
 puts "✓ Tests passed"
