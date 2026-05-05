@@ -1,8 +1,6 @@
 # Other solutions:
-# https://www.rubyforum.org/t/cassidoo-s-interview-question-of-the-week-454
-#   https://web.archive.org/save/https://www.rubyforum.org/t/cassidoo-s-interview-question-of-the-week-454/297
-# https://codingkata.tardate.com/ruby/min-repairs
-#   https://web.archive.org/web/20260505182612/https://codingkata.tardate.com/ruby/min-repairs
+# https://web.archive.org/save/https://www.rubyforum.org/t/cassidoo-s-interview-question-of-the-week-454/297
+# https://web.archive.org/web/20260505182612/https://codingkata.tardate.com/ruby/min-repairs
 #
 # Instructions:
 #
