@@ -1,6 +1,6 @@
 # Other solutions:
 # https://www.rubyforum.org/t/cassidoo-s-interview-question-of-the-week-447
-# https://web.archive.org/web/20260316145350/https://www.rubyforum.org/t/cassidoo-s-interview-question-of-the-week-447/189
+#   https://web.archive.org/web/20260316145350/https://www.rubyforum.org/t/cassidoo-s-interview-question-of-the-week-447/189
 #
 # Instructions:
 #
@@ -24,7 +24,7 @@
 # https://buttondown.com/cassidoo/archive/u1f312-dont-let-anyone-rob-you-of-your/
 
 # Based on the solution by lpogic at
-# https://web.archive.org/web/20260316145350/https://www.rubyforum.org/t/cassidoo-s-interview-question-of-the-week-447/189#post_4
+#   https://web.archive.org/web/20260316145350/https://www.rubyforum.org/t/cassidoo-s-interview-question-of-the-week-447/189#post_4
 def min_swaps_to_alternate(str)
   ["ab", "ba"].filter_map { swaps_to_pattern(str, it) }.min || -1
 end

@@ -1,6 +1,6 @@
 # Other solutions:
 # https://www.rubyforum.org/t/cassidoo-s-interview-question-of-the-week-449
-# https://web.archive.org/web/20260402172834/https://www.rubyforum.org/t/cassidoo-s-interview-question-of-the-week-449/213
+#   https://web.archive.org/web/20260402172834/https://www.rubyforum.org/t/cassidoo-s-interview-question-of-the-week-449/213
 #
 # Instructions:
 #
@@ -22,7 +22,7 @@
 # https://buttondown.com/cassidoo/archive/u1f6cb-ufe0f-set-realistic-goals-keep-re/
 
 # Based on the solution by lpogic at
-# https://web.archive.org/web/20260402172834/https://www.rubyforum.org/t/cassidoo-s-interview-question-of-the-week-449/213#post_2
+#   https://web.archive.org/web/20260402172834/https://www.rubyforum.org/t/cassidoo-s-interview-question-of-the-week-449/213#post_2
 # Difference: memoization is added here, for linear rather than exponential time.
 def min_error(haystack, haystack_left, needle, needle_left, memo = {})
   return 0 if needle_left <= 0

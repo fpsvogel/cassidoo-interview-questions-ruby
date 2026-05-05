@@ -1,6 +1,6 @@
 # Other solutions:
 # https://www.rubyforum.org/t/cassidoo-s-interview-question-of-the-week-445
-# https://web.archive.org/web/20260303091438/https://www.rubyforum.org/t/cassidoo-s-interview-question-of-the-week-445/151
+#   https://web.archive.org/web/20260303091438/https://www.rubyforum.org/t/cassidoo-s-interview-question-of-the-week-445/151
 #
 # Instructions:
 #
