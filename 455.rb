@@ -1,5 +1,5 @@
 # Other solutions:
-# TODO
+# https://web.archive.org/web/20260513005917/https://www.rubyforum.org/t/cassidoo-s-interview-question-of-the-week-455/325
 #
 # Instructions:
 #
@@ -16,7 +16,7 @@
 #     > 4 // [4, 3, 7, 2], where gcd(4,3)=1, gcd(3,7)=1, gcd(7,2)=1
 #
 # Source:
-# https://buttondown.com/cassidoo/archive/u1f57a-there-is-power-in-being-robbed-still/
+# https://buttondown.com/cassidoo/archive/u1fa96-focus-on-things-that-are-small-enough-to/
 
 def longest_coprime_subsequence(numbers)
   (1..numbers.length - 1).reverse_each do |length|
