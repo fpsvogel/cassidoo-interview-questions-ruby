@@ -30,25 +30,24 @@
 def count_bounces_to_target(grid, start, target, velocity)
   x, y = start
   dx, dy = velocity
-  udx, udy = velocity.map { it.clamp(-1, 1) } # unit vector
   grid_x, grid_y = grid
   bounce_count = 0
 
   loop do
-    dx.times do
-      if (x == 0 && udx == -1) || (x == grid_x - 1 && udx == 1)
-        udx = -udx
-        bounce_count += 1
-      end
-      x += udx
+    x += dx
+    until x.between?(0, grid_x - 1)
+      x_bound = x.clamp(0, grid_x - 1)
+      x = x_bound - (x - x_bound)
+      dx = -dx
+      bounce_count += 1
     end
 
-    dy.times do
-      if (y == 0 && udy == -1) || (y == grid_y - 1 && udy == 1)
-        udy = -udy
-        bounce_count += 1
-      end
-      y += udy
+    y += dy
+    until y.between?(0, grid_y - 1)
+      y_bound = y.clamp(0, grid_y - 1)
+      y = y_bound - (y - y_bound)
+      dy = -dy
+      bounce_count += 1
     end
 
     return -1 if x == start[0] && y == start[1]
