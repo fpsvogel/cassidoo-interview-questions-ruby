@@ -1,5 +1,5 @@
 # Other solutions:
-# TODO
+# https://web.archive.org/web/20260521181408/https://www.rubyforum.org/t/cassidoo-s-interview-question-of-the-week-456/335
 #
 # Instructions:
 #
